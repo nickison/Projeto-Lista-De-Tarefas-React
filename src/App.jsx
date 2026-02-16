@@ -27,11 +27,28 @@ function App() {
     setTarefas((tarefasAnteriores =>{
       const tarefaComId = {
         id: tarefasAnteriores.length + 1,
+        completa: false,
         ...novaTarefa
       }
       return [...tarefasAnteriores, tarefaComId]
     }))
   }
+
+  function tarefaCompleta(id){
+    setTarefas(tarefas.map(tarefa=>{
+
+      if(tarefa.id === id){
+        return{
+          ...tarefa,
+          completa: !tarefa.completa
+        }
+      }
+      console.log("clicou", id)
+    return tarefa
+    }
+    ))
+      
+    }
 
   function limparTarefas(){
     setTarefas([])
@@ -89,6 +106,7 @@ function App() {
         >
         <ListaDeTarefas 
         tarefa={tarefas} 
+        tarefaCompleta={tarefaCompleta}
         />
         </div>
 
@@ -96,14 +114,13 @@ function App() {
           type="button"
           onClick={limparTarefas}
           className="
-          text-center
           bg-gray-500
-          rounded-3xl
-          w-36
           hover:bg-gray-400
+          rounded-3xl
+          w-30
           "
           >
-            Limpar tarefas
+            Limpar Tarefas
           </Botao>
         
     </div>
