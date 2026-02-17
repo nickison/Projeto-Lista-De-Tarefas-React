@@ -35,14 +35,14 @@ function Tarefa({item, onClick }){
             </p>    
         </div>
             <Botao className="
-            rounded-2xl
-            bg-slate-400
-            hover:bg-slate-200
+            bg-transparent
+            rounded-4xl
+            w-6
             " 
             type="button"
             onClick={onClick}
             >
-                Concluida
+                {<img src="../src/assets/marca-de-verificacao.png"/>}
             </Botao>
         </li>
     )

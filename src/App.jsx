@@ -117,10 +117,10 @@ function App() {
           bg-gray-500
           hover:bg-gray-400
           rounded-3xl
-          w-30
+          w-12
           "
           >
-            Limpar Tarefas
+            {<img src='src/assets/tarefa-concluida.png' alt='Limpar Tarefas'/>}
           </Botao>
         
     </div>

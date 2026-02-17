@@ -23,7 +23,10 @@ function Formulario({adicionarTarefa}){
     
     return(
         <form  
-            className="flex flex-col gap-3"
+            className="
+            flex
+            flex-col
+            gap-3"
             onSubmit={prevenirAdicionar}
         >
                 <Input 
@@ -31,7 +34,11 @@ function Formulario({adicionarTarefa}){
                 placeholder="
                 Qual a nova Tarefa ?
                 " 
-                className="border p-2 rounded"
+                className="
+                border 
+                p-2
+                text-center
+                rounded"
                 onChange={(e)=>setTitulo
                 (e.target.value)}
                 />
@@ -40,7 +47,12 @@ function Formulario({adicionarTarefa}){
                     placeholder="
                     Descreva a tarefa
                     "
-                    className="border p-2 rounded"
+                    className="
+                    border 
+                    p-2 
+                    rounded
+                    text-center
+                    "
                     onChange={(e)=>setDescricao
                     (e.target.value)}
                 />
